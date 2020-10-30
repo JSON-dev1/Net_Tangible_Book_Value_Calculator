@@ -13,9 +13,9 @@ for value in stock_ticker:
     total_assests_row = row_divs[0]
     total_liabilities_row = row_divs[1]
     total_shares_row = row_divs[11]
-    total_assests_col = (total_assests_row.find_all('div', class_ = "Ta(c) Py(6px) Bxz(bb) BdB Bdc($seperatorColor) Miw(120px) Miw(140px)--pnclg D(tbc)", limit = 1))
-    total_liabilities_col = (total_liabilities_row.find_all('div', class_ = "Ta(c) Py(6px) Bxz(bb) BdB Bdc($seperatorColor) Miw(120px) Miw(140px)--pnclg D(tbc)", limit = 1))
-    total_shares_col = (total_shares_row.find_all('div', class_ = "Ta(c) Py(6px) Bxz(bb) BdB Bdc($seperatorColor) Miw(120px) Miw(140px)--pnclg D(tbc)", limit = 1))
+    total_assests_col = (total_assests_row.find('div', class_ = "Ta(c) Py(6px) Bxz(bb) BdB Bdc($seperatorColor) Miw(120px) Miw(140px)--pnclg D(tbc)"))
+    total_liabilities_col = (total_liabilities_row.find('div', class_ = "Ta(c) Py(6px) Bxz(bb) BdB Bdc($seperatorColor) Miw(120px) Miw(140px)--pnclg D(tbc)"))
+    total_shares_col = (total_shares_row.find('div', class_ = "Ta(c) Py(6px) Bxz(bb) BdB Bdc($seperatorColor) Miw(120px) Miw(140px)--pnclg D(tbc)"))
     total_assests_price = total_assests_col.find('span')
     total_liabilities_price = total_liabilities_col.find('span')
     total_shares_number = total_shares_col.find('span')
