@@ -20,7 +20,7 @@ for value in stock_ticker:
     total_liabilities_price = total_liabilities_col.find('span')
     total_shares_number = total_shares_col.find('span')
     stock_price = soup.find('div', class_ = "Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)")
-    net_tangible_book_value = total_assests_price - total_liabilities_price / total_shares_number / stock_price
+    net_tangible_book_value = float(total_assests_price) - float(total_liabilities_price) / float(total_shares_number) / float(stock_price)
     company_values.append(net_tangible_book_value)
 company_values.sort(reverse=True)
 print(company_values)
