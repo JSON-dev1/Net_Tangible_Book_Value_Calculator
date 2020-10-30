@@ -16,9 +16,9 @@ for value in stock_ticker:
     total_assests_col = (total_assests_row.find_all('div', class_ = "Ta(c) Py(6px) Bxz(bb) BdB Bdc($seperatorColor) Miw(120px) Miw(140px)--pnclg D(tbc)", limit = 1))
     total_liabilities_col = (total_liabilities_row.find_all('div', class_ = "Ta(c) Py(6px) Bxz(bb) BdB Bdc($seperatorColor) Miw(120px) Miw(140px)--pnclg D(tbc)", limit = 1))
     total_shares_col = (total_shares_row.find_all('div', class_ = "Ta(c) Py(6px) Bxz(bb) BdB Bdc($seperatorColor) Miw(120px) Miw(140px)--pnclg D(tbc)", limit = 1))
-    total_assests_price = total_assests_col.find_all('span')
-    total_liabilities_price = total_liabilities_col.find_all('span')
-    total_shares_number = total_shares_col.find_all('span')
+    total_assests_price = total_assests_col.find('span')
+    total_liabilities_price = total_liabilities_col.find('span')
+    total_shares_number = total_shares_col.find('span')
     stock_price = soup.find('div', class_ = "Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)")
     net_tangible_book_value = total_assests_price - total_liabilities_price / total_shares_number / stock_price
     company_values.append(net_tangible_book_value)
